@@ -153,9 +153,9 @@ Lloc on s’instal·la la memòria RAM Actualment →  de tipus DIMM (Dual in li
 
 ## Xipset
 
-## Caixa i Font d’alimentació
+### Caixa i Font d’alimentació
 
-### Caixa:
+#### Caixa:
 - Part que serveix de suport i d’esquelet per allotjar les peces bàsiques d’un ordinador
 - Pot ser fibra o titani, temperat, fins d’alumini o acer
 - Parts d’una caixa:
