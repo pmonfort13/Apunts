@@ -342,13 +342,187 @@ Lloc on s’instal·la la memòria RAM Actualment →  de tipus DIMM (Dual in li
 - Sol ser rectangular i disposa d’una sèrie de potes, connectors o contactes per tal de comunicar informació amb la resta de components
 
 ### Arquitectura
-- Processadors CISC (Complex Instruction Set Computer)
+1. **Processadors CISC (Complex Instruction Set Computer)**
   - Joc d’instrucció molt ampli
   - Format variable d’instrucció
   - Algunes instruccions més llargues que altres i amb diferents nombres de camps.
   - Unitat de control microprogramada.
   - Disseny electrònic complex pel seu gran nombre d’instruccions
   - Fa complicat augmentar la freqüència de funcionament.
-- Processadors RISC (Reduced Instruction Set Computer)
+2. **Processadors RISC (Reduced Instruction Set Computer)**
   - Joc d’instruccions més reduït i simple 
-  - Electrònica més simple
+    - Electrònica més simple
+    - Facilitat augmentar la freqüència de funcionament
+  - La falta de funcionalitat ha de ser resolta pels compiladors:
+    - Afegeix conjunts d’instruccions simples que substitueixen a una altra més complexa
+
+3. **Instruccions**
+- Fases d’execució
+  - Cerca de la instrucció
+  - Descodificació de la instrucció
+  - Cerca dels operands
+  - Execució de la instrucció
+  - Emmagatzematge dels resultats.
+  - Cadascuna de les fases s’executa en un cicle de rellotge com a mínim. 
+  - Un programa serà un conjunt d’instruccions que s’executaran una darrere l’altra. 
+  - Durant l’execució, les sentències de control faran que no totes les instruccions s’executin de forma seqüencial: hi haurà salts de programa.
+
+  - Mida de paraula
+    - Nombre de bits amb els que treballa el processador de manera unitària
+    - **NO CONFONDRE** amb l’amplada dels busos
+
+### Característiques físiques
+#### Escales d’integració
+L’evolució dels microprocessadors vé molt lligada a l’evolució de l’escala d’integració.
+- **Micra:** mesura que indica la mida que ocupa cada transistor
+  - **Encapsulats:**
+    - DIP: Amb potes als dos costats d’un xip rectangular
+    - PLCC: Potes als quatre costats d’un xip rectangular
+    - PGA: Pin Grid Array, Matriu de potes que cobreixen gran part de la cara d’un xip
+    - SECC: Tots els contactes estan en una de les vores del processador similar a una targeta de connexió.
+    - LGA: Té una sèrie de contactes plans en lloc de disposar de potes, les quals estaran al sòcol
+
+### Característiques tecnològiques
+- **Velocitat interna**
+  - Diferents unitats de mesura segons el tipus d’ordinador:
+    - MHz/GHz: Freqüència de polsos que envia el rellotge al processador
+    - MPS: Fa referència únicament a instruccions que no siguin de coma flotant.
+    - FLOPS: Quantitat d’instruccions de coma flotant per segon. Múltiples: Mega FLOPS.
+- **Velocitat externa o del bus (Front Side Bus)**
+  - Velocitat amb la que la CPU es comunica amb la placa. Sol estar entre 100 MHz i 1000 MHz aprox. Factor multiplicador: número que, multiplicat per la velocitat externa, dóna la interna a que treballa el micro.
+- **DMI (Direct Media interface)**
+  - Substitució a FSB. Es comunica sobre un canal diferent amb memòria RAM, un canal diferent amb PCIe, un tercer canal de DMI per comunicar-se amb tots els altres components de l'ordinador. Augmenta el rendiment.
+- **QPI (QuickPath)**
+  - Orientat a servidor
+- **Memòria**
+  - Memòria molt ràpida que accelera la transferència de dades. S’hi emmagatzemen dades de memòria principal, a les quals els micro hi ha d’accedir pròximament. 
+  - Tre Tipus: a la memòria cau: 
+    1. Memòria cau o caché L1 (nivell 1), Memòria cau o caché L2 (nivell 2), 
+    2. Memòria cau o caché L3 (nivell 3), 
+    3. Memòria cau externa Situada fora el microprocessador en forma de xip a la placa mare o targeta memòria.
+
+-  **Memòria Cau**
+  - Primer nivell (Caché L1)
+    - Alta velocitat d’accés.
+    - Encapsulada dins el propi nucli del processador.
+    - Mida molt limitada.
+    - Alimentada per la memòria cau de nivells més alts.
+
+  - Segon nivell (Caché L2)
+    - Alta velocitat, però no tanta com la cau L1.
+    - Major grandària que la cau de primer nivel
+
+  - Tercer nivell (caché L3)
+    - S’anomena memòria cau de tercer nivell a la més externa al microprocessador i més lenta que L1 i L2 però de més mida.
+
+  - Memòria cau externa
+    - Situada fora el microprocessador en forma de xip a la placa mare o targeta memòria
+
+
+### Alimentació
+- 2 voltatges diferents:
+  - Voltatge d’extern (Permet comunicació del processador amb la placa base)
+  - Voltatge intern o de nucli
+
+### Refrigeració
+  - El consum va lligat a la velocitat de procés. Es pot escalfar massa. 
+  - El sistema de refrigeració del micro s’ha de mantindre a la temperatura de funcionament pel que s’ha dissenyat.
+
+## Memòries
+### Introducció
+  - Qualsevol instrucció o dada ha d’estar a memòria abans de poder arribar fins el processador
+  - Procés: 
+    1. El processador, a través del bus d’adreces, indica a quina posició de memòria vol accedir. 
+    2. A través del bus de control s’indica quin tipus d’operació vol fer amb la memòria. 
+    3. Les dades viatgen entre memòria i processador a través del bus de dades.
+
+### Memòria i emmagatzematge
+  - **NO CONFONDRE**
+    - Memòria principal: quantitat de RAM que té el sistema. 
+    - Memòria secundària o d’emmagatzematge massiu: quantitat de memòria en dispositius d’emmagatzematge extern.
+
+### Funcionament amb la CPU
+  - Per regular el flux d’informació entre la CPU i els diversos elements del computador. 
+
+- Velocitats de memòria: Els sistemes moderns uneixen la memòria i la CPU a través del bus frontal (FSB) i uneixen la memòria cau (caché) de nivell 2 (L2) amb el controlador de memòria a través del bus de darrera.
+
+- **Tasa de transferència**
+  - Quantitat d'informació que és capaç de transferir la memòria per unitat de temps.
+  - Càlcul: Quantitat de bytes del bus de dades per la freqüència de funcionament de la memòria. Ex: Bus de 64 bits a 100 MHZ. Tasa = 8 bytes/cicle * 100 MHz = 800 MB/s
+
+### Classificació
+#### Segons accés
+- RAM
+- ROM
+#### Jerarquia de la memòria
+- Registres
+- Memòria Cau
+- Memòria Principal
+- Memòria Secundària
+
+## Perifèrics
+### Introducció
+  - Dispositius mitjançant els quals l'ordinador es comunica amb el món exterior. 
+  - Es divideixen en dos grans grups: 
+    - **D’entrada, sortida, entrada/sortida:** 
+      - Introduir informació, cap a l'ordinador, o treure informació, des de l'ordinador. 
+      - Exemples: D'entrada: 
+        - Teclat, ratolí, escànner, webcam, micròfon. 
+        - De sortida: Monitor, impressora, plotter, altaveus. 
+        - D'entrada/sortida: mòdems, targetes de xarxa.
+
+    - **D'emmagatzemament**
+      - Guarden informació de manera permanent. Discs durs, discs flexibles, CD-ROM, DVD, SSD…
+
+### Perifèrics d’entrada
+- **Teclat**
+  - Amb el teclat ens podem comunicar amb l'ordinador podent introduir dades e instruccions en forma de text, símbols, xifres, etc.
+  - Connectors: PS/2, USB o DIN (obsolet)
+  - Funcionament: Té un processador que s’encarrega de comprovar si s’ha premut una determinada tecla. 
+    1. Quan s’ha premut una tecla el petit processador detecta la pulsació i envia el codi corresponent a la interfície de teclat a la placa mare que sol ser un xip encarregat de controlar els ports d’entrada/sortida. 
+    2. Quan el processador accepta la interrupció s’executen una sèrie de programes encarregats de llegir el codi de la tecla i determinar el caràcter que correspon a la tecla que s’ha premut. 
+  - Tipus de teclats: 
+    - Segons el mecanisme: 
+      - Teclats mecànics, Teclats de casquets de goma, Teclats de membrana, Teclats antics.
+
+- **Ratolí**
+  - Permet controlar manualment la posició del cursor sobre el monitor. Dos o tres botons.
+
+- **Escàner**
+  - Permetrà digitalitzar i capturar imatges. Podem, doncs, captar fotografies, gràfics, textos... i posteriorment processar-les o emmagatzemar-les en format digital.
+
+- **Dispositius de joc**
+  - Consoles, mandos, volants…
+
+### Perifèrics de sortida
+- **Monitor**
+  - Ens permet visualitzar tota la informació que l'ordinador ens proporciona i saber quines operacions du a terme la màquina en tot moment. 
+  - Tipus de monitors: LED, LCD, CRT
+
+### Dispositius d’emmagatzematge
+#### Introducció
+- Podem classificar els sistemes d'emmagatzematge en: Sistemes d'emmagatzematge volàtil més utilitzats en sistemes: memòria principal, caché…
+#### Tipus d’emmagatzematge:
+- Emmagatzematge magnètic: disc durs, disquets, cintes magnètiques, etc
+- Emmagatzematge òptic: CD-ROM, DVD, etc
+- Emmagatzematge d’estat sòlid: Llapis de memòria, Memory Stick, etc.
+
+#### Disc magnètic
+- Suport d’emmagatzematge secundari, que complementa la memoria principal o memoria RAM
+- Memòria no volàtil
+- Accés directe a la informació
+- Més lent que memòria principal
+
+#### Disc dur (discs rígids o discs fixs)
+##### Estructura
+- Plats: on es guarda la informació
+- Capçals: per llegir i escriure sobre els plats.
+- Motors: Un per fer girar els plats i l’altre pel moviment dels capçals
+##### Plats
+- Compostos de vidre, ceràmica o alumini finalment polits i revestits
+- Un motor que els fa girar a una velocitat constant entre les 3600 i 7200 RPM (revolucions per minut)
+##### Capçals
+- Ubicats en pila i són els responsables de la lectura i l'escriptura de les dades en els discos. La majoria dels discos durs inclouen un capçal de lectura/escriptura a cada costat del disc.
+##### Càlcul de la capacitat:
+- Capacitat = cilindres x capçals x sectors/pista x mida del sector
+- Ex: Disc amb 6253 cilindres, 16 capçals i 63 sectors/pista i 512 bytes/sector • Capacitat = 6253 x 16 x 63 x 512 bytes = 3.227.148.288 bytes, aprox. 3 GB
