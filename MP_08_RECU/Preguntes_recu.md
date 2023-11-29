@@ -62,10 +62,10 @@
    - d) Totes són falses.
 
 - **Quin arxiu no s’ha d’editar per a unir bind i dhcp?**
-     - a) named.conf.local i named.conf.options
+     - a) named.conf.local i named.conf.options **--> CORRECTE**
      - b) named.conf i named.conf.local
      - c) named.con i dhcpd.conf
-     - d) a i c son falses  **--> CORRECTE**
+     - d) a i c son falses  
 
 - **Quin port actúa al dhcp per al servidor i client?**
 67 Servidor i 68 Client
@@ -78,7 +78,7 @@
    - hosts i interfaces 
 
 - **Per a que serveix la clausula authoritative de la configuracio del DHCP?**
-la clàusula authotitative indica que el servidor està autoritzat, això significa que l’assignació que ofereix als clients és correcta (DHCPACK), és a dir, que la utilitat que té és identificar el servidor DHCP com aquell autoritzat dins la xarxa enfront d’altres servidors DHCP instal·lats. 
+   - La clàusula authoritative indica que el servidor està autoritzat, això significa que l’assignació que ofereix als clients és correcta (DHCPACK), és a dir, que la utilitat que té és identificar el servidor DHCP com aquell autoritzat dins la xarxa enfront d’altres servidors DHCP instal·lats. 
 
 - **Quina funció fa lo DHCPREQUEST?**
    - Renovació: Un client DHCP utilitzarà el missatge DHCPREQUEST per renovar l'arrendament d'una adreça IP ja assignada. 
