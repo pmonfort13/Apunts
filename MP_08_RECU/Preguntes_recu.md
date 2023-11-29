@@ -1,4 +1,4 @@
-# PREGUNTES 
+# PREGUNTES I POSSIBLES PREGUNTES RECU TEÒRIC
 
 - **Si el servei DNS arrenca correctament i les comandes per comprovar la sintaxis dels fitxers no donen cap error, en quin dels següents fitxers podem tenir l’error?**
    - a) En qualsevol que haguéssim modificat.  **--> CORRECTE**
@@ -87,17 +87,31 @@ la clàusula authotitative indica que el servidor està autoritzat, això signif
    
    - Confirmació: Un client que ha rebut diverses ofertes d'adreces IP dels servidors DHCP pot enviar un missatge DHCPREQUEST per confirmar l'adreça IP que ha seleccionat.
 
-- Quins arxius de configuració fan que encara que estiguin mal el servei pugui esta actiu
+- Quins arxius de configuració fan que encara que estiguin mal el servei pugui esta actiu?
 
-- Paràmetre option host-name
 
-- Que es el teams d'Actualització (Refresh Time)
+- **Paràmetre option host-name**
+   - Configura el nom del host.
 
-- Funció del registre A?
+- **Que es el teams d'Actualització (Refresh Time)?**
+   - Indica cada quan temps (en segons) un servidor secundari
+ha de contactar amb el primari per a comprovar els canvis de la zona.
 
-- Funció del registre SOA?
+- **Quina és la funció del registre A?**
+   - Estableix una correspondència entre una @IP i un nom de domini. Cada registre A identifica un nom de màquina, i el client DNS pot obtenir a través d’ell la seva direcció IP.
 
-- Perquè de la notació in.addr.arpa?
+- **Quina és la funció del registre NS?**
+   - Estableix l’equip servidor de noms (DNS) autoritzat per a la zona del domini
+informaticaASIX2.com.
+
+- **Què és el registre SOA?**
+   - És un registre de recursos d'inici d'autoritat.
+   
+- **Quina és la funció del registre CNAME?**
+   - Defineix un 'àlies' com a segon nom reconegut d’una IP ja definida
+anteriorment
+
+- **Perquè de la notació in.addr.arpa?**
   - La resolució dels noms de domini es fa mitjançant consultes que van de dreta
 a esquerra
   - Els primers octets d’una @IP identifiquen la xarxa a la qual pertany i la diferència d’altres xarxes.
