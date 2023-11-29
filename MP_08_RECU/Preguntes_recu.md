@@ -115,3 +115,7 @@ anteriorment
   - La resolució dels noms de domini es fa mitjançant consultes que van de dreta
 a esquerra
   - Els primers octets d’una @IP identifiquen la xarxa a la qual pertany i la diferència d’altres xarxes.
+
+- **Quin és el procès que utilitza DNS?**
+  - SOL el procès named
+  
