@@ -119,3 +119,11 @@ a esquerra
 24. **Quin és el procès que utilitza DNS?**
   - SOL el procès named
   
+25. **Perquè es imprescindible un servei de noms?**
+    - . Podem accedir als serveis dels equips adreçant-nos a ells amb un nom 'clar' i fent  les configuracions dels serveis amb aquests noms s'aconsegueix flexibilitat.
+
+26. **Quins dos tipus de configuració del servei de DNS hi ha?**
+    - Per a Internet (públic) i dins d'una xarxa local (privat)
+
+27. **Com podem comprovar que el servei DNS es troba en execució?**
+    - nmap -sU localhost -p 53
