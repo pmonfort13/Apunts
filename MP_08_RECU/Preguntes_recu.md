@@ -81,14 +81,23 @@
 la clàusula authotitative indica que el servidor està autoritzat, això significa que l’assignació que ofereix als clients és correcta (DHCPACK), és a dir, que la utilitat que té és identificar el servidor DHCP com aquell autoritzat dins la xarxa enfront d’altres servidors DHCP instal·lats. 
 
 - **Quina funció fa lo DHCPREQUEST?**
-Renovació: Un client DHCP utilitzarà el missatge DHCPREQUEST per renovar l'arrendament d'una adreça IP ja assignada. 
+   - Renovació: Un client DHCP utilitzarà el missatge DHCPREQUEST per renovar l'arrendament d'una adreça IP ja assignada. 
+   
+   - Canvi d'adreça IP: Si un client DHCP vol canviar l'adreça IP assignada, pot enviar un missatge DHCPREQUEST per sol·licitar una nova adreça IP al servidor DHCP.
+   
+   - Confirmació: Un client que ha rebut diverses ofertes d'adreces IP dels servidors DHCP pot enviar un missatge DHCPREQUEST per confirmar l'adreça IP que ha seleccionat.
 
-Canvi d'adreça IP: Si un client DHCP vol canviar l'adreça IP assignada, pot enviar un missatge DHCPREQUEST per sol·licitar una nova adreça IP al servidor DHCP.
+- Quins arxius de configuració fan que encara que estiguin mal el servei pugui esta actiu
 
-Confirmació: Un client que ha rebut diverses ofertes d'adreces IP dels servidors DHCP pot enviar un missatge DHCPREQUEST per confirmar l'adreça IP que ha seleccionat.
+- Paràmetre option host-name
 
-Quins arxius de configuració fan que encara que estiguin mal el servei pugui esta actiu
+- Que es el teams d'Actualització (Refresh Time)
 
-Paràmetre option host-name
+- Funció del registre A?
 
-Que es el teams d'Actualització (Refresh Time)
+- Funció del registre SOA?
+
+- Perquè de la notació in.addr.arpa?
+  - La resolució dels noms de domini es fa mitjançant consultes que van de dreta
+a esquerra
+  - Els primers octets d’una @IP identifiquen la xarxa a la qual pertany i la diferència d’altres xarxes.
