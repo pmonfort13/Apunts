@@ -92,6 +92,3 @@ Quins arxius de configuració fan que encara que estiguin mal el servei pugui es
 Paràmetre option host-name
 
 Que es el teams d'Actualització (Refresh Time)
-
-'''
-   print (Hello  World!);
