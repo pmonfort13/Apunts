@@ -93,5 +93,5 @@ Paràmetre option host-name
 
 Que es el teams d'Actualització (Refresh Time)
 
-
-
+'''
+   print (Hello  World!);
