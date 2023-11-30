@@ -136,3 +136,6 @@ a esquerra
 
 30. **Que s'ha de fer cada cop es fa un canvi als arxius .hosts i .rev del bind al mestre?**
     - Cal actualitzar el paràmetre serial (incrementar-lo en una unitat)
+
+31. **A quin directori verifiquem les leases del dhcp?**
+    - /var/lib/dhcp/dhcp.leases
