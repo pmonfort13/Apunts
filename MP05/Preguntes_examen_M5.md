@@ -66,6 +66,8 @@
 - Elements i funcions
 - Cicles
 - Càlcul dels cicles (Hz)
+- Arquitectures CICS i RISC (Diferències?)
+- Definició de Latència 
 
 ### RAM
 - DUALCHANNEL? (o QUADCHANNEL)
@@ -80,6 +82,8 @@
 ### BIOS
 - Configuració
 - CMOS
+- UEFI
+- Diferències entre BIOS i UEFI
 
 ## PREGUNTES PRÀCTICA SERVIDOR
 - Perquè se poden posar dos CPUs en aquests tipus de plaques? (Paral·lisme)
