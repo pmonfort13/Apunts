@@ -139,3 +139,6 @@ a esquerra
 
 31. **A quin directori verifiquem les leases del dhcp?**
     - /var/lib/dhcp/dhcp.leases
+
+32. **Quines comandes s'han de realitzar en un client Windows per tal de forçar la configuració  DHCP?**
+    - ipconfig /release i ipconfig /renew
