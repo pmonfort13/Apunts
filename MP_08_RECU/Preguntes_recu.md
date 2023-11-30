@@ -142,3 +142,6 @@ a esquerra
 
 32. **Quines comandes s'han de realitzar en un client Windows per tal de forçar la configuració  DHCP?**
     - ipconfig /release i ipconfig /renew
+
+33. **On es guarda el caché creat pel procés named?**
+    - /var/cache/bind
