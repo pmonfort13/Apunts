@@ -127,3 +127,12 @@ a esquerra
 
 27. **Com podem comprovar que el servei DNS es troba en execució?**
     - nmap -sU localhost -p 53
+
+28. **Amb quina comanda s'activa el servidor DHCP?**
+    - /etc/init.d/isc-dhcp-server start
+
+29. **Amb quines comandes fem les comprovacions de sintaxi?
+    - named-checkconf i named-checkzone
+
+30. **Que s'ha de fer cada cop es fa un canvi als arxius .hosts i .rev del bind al mestre?**
+    - Cal actualitzar el paràmetre serial (incrementar-lo en una unitat)
