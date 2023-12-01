@@ -4,8 +4,12 @@
 
 ### Preguntes de la informació
 - Què és la informació?
+  - **RESPOSTA** -> Resultat de manipular i processar un conjunt de dades per obtenir
+nou coneixement per a un individu o sistema
 - Elements de la comunicació?
+  - **RESPOSTA** -> Emissor, receptor, missatge, canal, codi.
 - Què és la informàtica?
+  - **RESPOSTA** -> Ciència que estudia el tractament automàtic i racional de la informació. Prové dels termes INFORmació i autoMÀTICA
 
 ### Preguntes de Hardware o maquinaria
 - Elements que el componen?
@@ -27,7 +31,10 @@
 - Funcions dels registres i definició
 - Càlcul del nombre de registres
 - Busos i les seves funcions
-- Processos de la CPU?
+- Instruccions de la CPU?
+- Registres interns
+- ALU
+
 
 ## PDF3
 
@@ -40,7 +47,7 @@
 - Per on viatgen les dades de la memòria?
 
 ### Busos
-- Funcions
+- Funcio
 - Tipus de busos
 
 ### Perifèrics
@@ -87,4 +94,6 @@
 
 ## PREGUNTES PRÀCTICA SERVIDOR
 - Perquè se poden posar dos CPUs en aquests tipus de plaques? (Paral·lisme)
+- Font d'alimentació
 - Bahies
+- RACK
