@@ -13,17 +13,33 @@ nou coneixement per a un individu o sistema
 
 ### Preguntes de Hardware o maquinaria
 - Elements que el componen?
+  - **RESPOSTA** -> Monitor, teclat, CPU, memòria, xarxa, emmagatzemament...
+  
+- Tipus de software o programari
+  - Sistemes operatius, aplicacions d'ofimàtica, jocs, programes de gestió del  sistema...
 
 ### Preguntes de MAC
-### Tipus de software o programari
+
 
 ### Part Humana
 - Diferència entre usuari i personal informàtic?
+  - **RESPOSTA** -> Un personal informàtica dona servei als usuaris i un usuari usa la informàtica per fer el seu treball. 
 
 ## PDF2
 
 ### Arquitectura Von Neumann
 - Característiques d'un ordinador?
+  1. Pot fer càlculs matemàtics i operacions lògiques
+  2. Opera a alta velocitat amb exactitud i precisió
+  3. Capacitat per manipular grans quantitats d'informació
+ 
+- Que fa els diferents operadors lògics?
+  1. AND
+  2. OR
+  3. XOR
+  4. NOT
+  5. XNOR
+
 - Unitats funcionals de l'ordinador?
 - Elements que la componen i la seves funcions?
   
