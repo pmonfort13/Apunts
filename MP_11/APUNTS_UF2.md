@@ -113,11 +113,33 @@
 
 ## Introducció
 
+- Seguretat de xarxa --> Eines i polítiques adoptaqdes per l'administrador del sistema per prevenir i controlar l'accés no autoritzat, mal ús, modificació o inhabilitació.
+
+- Monitoratge de trànsit --> aspectes més importants en la seguretat en la xarxa - Classificat en:
+    - **Monitoratge passiu:** escolta i anàlisi del trànsit real de la xarxa. Recull informació i analitza.
+    - **Monitoratge actiu:** Injectar paquets de prova a la xarxa, o enviar-ne als servidors i aplicacions i a mesura el temps de resposta obtingut.
+
 ## Eines de monitoratge passiu
 
-## Actiu
+- **Detectors o sniffers:** Permeten la captura i enregistrament de la informació que circula per una xarxa.
+    - Manera de detectar sniffers: Cercar la presència de targetes en **mode promiscu.**
+    - Diverses eines: ifconfig, ifstatus o Network Promiscous Ethernet Detector (NEPED).
+
+- **Mesures de protecció**
+    - **Xifratge de documents** que s'envien per la xarxa amb PGP
+    - Eines criptogràfiques: **protegiexen la informació** que circula, pero no estableixen connexions segures.
+    - **Secure Shell (SSH):** Permet l'establiment d'inicis de sessió segurs.
+
+## Eines de monitoratge Actiu
+
+- Escàners --> Serveixen per detectar les vulnerabilitats d'un sistema informàtic.
+- Escaneig de ports --> Esbrinar els ports TCP/UDP que estan oberts en una màquina remota pertanyent a una xarxa determinada.
+- Ports oberts --> Informació molt interessant per als atacants, ja que les vulnerabilitats del processos que estan en funcionament poden permetre l'accés no autoritzat al sistema.
+- TCP i UDP --> Protocols que comparteixen tots els ordinadors connectats a Internet per poder connectar-se entre ells.
 
 ## Esquema de funcionament d'un escàner
+
+POSAR FOTO DE L'ESQUEMA
 
 ## Ordres del sistema
 
