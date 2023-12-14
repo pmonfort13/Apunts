@@ -190,14 +190,63 @@ POSAR FOTO DE L'ESQUEMA
 
 ## Introducció
 
-## Interconnexió de xarxes
+- **Exemple:**
+
+![Interconnexió de xarxes](/img/Captura%20de%20pantalla%202023-12-14%20110020.png)
+
+- S'establerix una VPN entre dos gateways, cadascun d'una xarxa privada
+- Les màquines de les xarxes utilitzen aquests gateways com routers
+- Quan una gateway rep un paquet dirigit a la xarxa privada l'altre extrem el paquet s'envia a través de la VPN de manera segura
+- El trànsit sol es protegit per la VPN entre els dos gateways.
 
 ## Treballadors remots
 
+- Exemple:
+
+![Treballadors remots](/img/Captura%20de%20pantalla%202023-12-14%20110710.png)
+
+- Qualsevol persona amb permís pot connectar-s'hi des de qualsevol lloc.
+- L'ordinador ha de comptar amb un client VPN, que estableix una connexió al concentrador de VPNs de la xarxa corporativa
+- Tot el trànsit des de l'ordinador fins la xarxa corporativa queda protegit per la VPN.
+
 ## Avantatges i inconvenients VPN
+
+- **Avantatges**
+    - **Seguretat**: És possible assegurar diversos serveis amb aquest mecanisme
+    - **Mobilitat**: Connexió segura entre usuaris mòbils i la xarxa fixa, independentment de la localització geogràfica
+    - **Transperència**: Interconnexió d'ordinadors en un sistema informàtic i de difrerents xarxes. Transparent per l'usuari, Configuració només a l'entorn servidor
+    - **Simplicitat**: Una VPN aconsegueix que l'equip sigui vist per tota la xarxa, la qual cosa simplifica l'administració d'equips remots.
+    - **Estalvi econòmic**: Trànsit segur de paquets per xarxes púibliques --> cost econòmic menor que la creació de xarxa dedicada.
+
+- **Inconvenients**: 
+    - **Fiablitat**: Depèndencia del proveïdor de xarxa (ISP) --> Fallades en la xarxa que poden incomunicar recursos de la nostra VPN.
+    - **Confiança**: Si la seguretat d'un node o subxarxa que forma part d'una VPN queda compromesa es veurà afectada la seguretat de tots els components de la xarxa.
 
 ## Tunneling
 
+- Mètode que consisteix a utilitzar la infrestructura de xarxes per transportar dades d'una zrxa a una altra.
+- Les dades que han de ser transportades poden ser paquets de protocol diferent al que gestioni internet
+- Els paquets encapsulats són llavors encaminats sobre Internet entre els extrems del túnel. Aquesta ruta l'ogica se l'anomena 'túnel'.
+
+![Paquets tunneling](/img/Captura%20de%20pantalla%202023-12-14%20113345.png)
+
 ## Protocols de Tunneling
 
+- **IP Security (IPSec)**: : garanteix la seguretat de la transmissió i autenticació d’ususaris sobre xarxes públiques
+- **Protocol de Tunneling Punt a Punt (PPTP)**: alternativa a IPSec. Treballa en la capa d’enllaç i s’utilitza per a transmissions segures de tràfic basat en Windows.
+- **Layer 2 Tunneling Protocol**: combinació de reenviament de
+capa 2 i PPTP, i es utilitzat per a encapsular trames de tipus PPP (Protocol Punt a Punt).
+- **OpenVPN**: protocol de codi obert. Totes les dades son
+xifrades amb una clau AES-256 i autenticació RSA.
+
 ## Secure Shell
+
+- Protocol que permet establir una connexió segura, de manera que un client pot obrir una sessió interactiva en una màquina remota per enviar ordres o fitxers a través d’un canal segur.
+- Les dades que circulen estan **xifrades**
+- **El client i el servidor s'autentifiquen mútuament.**
+- **Fases** d'una connexió0 SSH:
+    - Es determina la **identitat del servidor i del client** (capa segura de transport). El client inicia sessió en el servidor
+    - Establiment d’un **canal segur**. Fase de negociació entre el client i el servidor per posar-se d’acord en els mètodes de xifratge que volen utilitzar. 
+    - **Autenticació**. Un cop s’ha establert la connexió segura entre el client i el servidor, el client s’ha de connectar al servidor per obtenir un dret d’accés. Hi ha diversos mètodes: 
+        - El mètode més conegut és la **contrasenya** tradicional.
+        - Ús de **claus públiques**. 
