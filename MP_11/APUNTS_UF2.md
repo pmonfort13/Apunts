@@ -139,51 +139,214 @@
 
 ## Esquema de funcionament d'un escàner
 
-POSAR FOTO DE L'ESQUEMA
+![Esquema_escaner](/img/prova.png)
 
 ## Ordres del sistema
 
+- Diagnosi ràpida de possibles errors --> **ping** (determinar si una màquina està connectada) i **traceroute** (Obtenir descripció del camí que es va seguint per arribar a una màquina).
+
+- Eines que faciliten el monitoratge de la xarxa --> MRTG (Multi Router Traffic Grapher) o Nagios
+
 ## Seguretat en xarxes sense fil
+
+- **Comunicacions sense fil** --> basades en ones de ràdio o infroges, permeten connectar-se des de qualsevol lloc sense necessitat d'estendre cap cablejat.
+- **Wifi** --> wireless fidelity - Xarxes locals sense fils --> WLAN
+- Les  xarxes  locals  sense  fil  poden  operar  en  mode  ad  hoc  o  en  mode infraestructura:
+    - **Mode ad hoc**
+    - **Mode infraestructura**
 
 ## Riscos potencials dels serveis de xarxa
 
+### Seguretat de les topologies i el tipus de xarxa
+
+- **Topologia** --> S'enten per la forma o estructura de xarxa des del punt de vista lògic.
+
+### Seguretat del maquinari de xarxa
+
+- Commutadors, concentradors i encaminadors --> Prendre les següents precaucions:
+    - **Activació del xifratge**
+    - **Desactivar el control remot d'administració**
+    - **Canviar les contrasenyes d'administració dels dispositius**
+    - **Usar llistes d'accés** (permeten sol els protocols, ports i IP que es necessitin)
+
 ## Control d'accés a la xarxa basat en autenticació
+
+- Requereix de tres components:
+    - **Client**
+    - **Autenticador**
+    - **Servidor d'autenticació**
 
 ## Atacs als serveis de la xarxa
 
-## Atacs de falsejament d'identitat
+### Atacs de denegació de servei
 
-## Sistemes de detecció d'intrusos
- 
+- Objectiu --> Inutliitzar el maquinari o programa de manera que els recursos del sistema no siguin accesibles desde la xarxa.
+- Basat en el modus operandi del protocol d'establiment de sessió.
+![Esquema Atac DDoS](/img/ddos-attack-1-1024x694.png)
+
+## Atacs de falsejament d'identitat o spoofing
+
+- Formes de suplantació d'identitat:
+    - **Falsejament de IP**
+    - **Falsejament d'ARP** --> Usades per realitzar atacs man-in-the-middle
+    - **Falsejament de DNS** --> Usades per realitzar atacs pharming
+- Amb aquestes tècniques es poden aconseguir atacs de denegació de servei.
+
+## Sistemes de detecció d'intrusos (IDS)
+
+- Monitoren els continguts del flux d'informació de la xarxa a la recerca i rebuig de possibles atacs.
+- Capacitat de combinar hardware i software.
+- Tipus de classificacions:
+    - Segons la **font de la informació**
+        - **Basats en xarxa**
+        - **Basats en màquina**
+        - **Basats en aplicacions**
+    - Segons el **tipus d'anàlisi**
+        - Basats en **firmes**
+        - Basats en **anomalies**
+    - Segons el **tipus de reposta d'IDS**
+        - **Resposta passiva**
+        - **Resposta activa**
+
 ## Les xarxes públiques
+
 ### Seguretat en la connexió
 
+- **Xarxa pública** --> Gestionada per una operador de telecomunicacions, per tant la informació que viatja és propensa de ser 'observada'
+- Ús: Requereix l'establiment de relacions de confiança en un entorn gairebé anònim i intangible per definició
+- **Signatura electrònica** --> permet que un emissor pugui enviar missatges a un receptor complint les tres propietats següents:
+    - **Autenticitat**
+    - **Integritat**
+    - **No repudi**
 
 # IDS (SNORT)
 
 ## SNORT IDS
 
+- Funció de **detectar comportaments anòmals** dins de la 
+nostra xarxa o intents d'accés no desitjats.
+
+
+### Què és SNORT?
+
+- Es un IDS capaç d'analitzar el tràfic de la nostra xarxa a temps real i reaccionar a partrons detectats.
+
 ## Funcionament dels IDS
+
+- Eines que utilitza:
+    - Recollida de dades o sniffing
+    - Aplicació de regles per detectar riscos
+    - Filtratge on compara patrons de tràfic observat amb patrons d'atacs predifinits
+    - Detecció d'esdeveniments no esperats a la xarxa
+    - Generació d'alarmes
+    - Actuació sobre el tràfic detectat
 
 ## SNORT
 
+### Modes de funcionament
+
+- Monitorització (sniffer)(-v capçaleres -d dades)
+    - Exemple: **sudo snort -v -i eth0**
+- Enregistrament de paquets de la Xarxa
+    - Exemple: **sudo snort  -l ./log  -i eth0**
+- HIDS (Host IDS) / NIDS (Network IDS)
+    - Exemple: **sudo snort -A console -c /etc/snort/snort.conf -i eth0**
+
 ## Ubicació dels IDS
+
+- S'ha de situar en un lloc on pugui capturar tot el tràfic a monitorar
+- La ubicació dependrà del seu us com a IDS/IPS
+    - s'ha de situar inline al mig de la comunicació
+- De vegades es posa un IDS abans del firewall i un altre després o un IPS
 
 ## SNORT Inline (IPS)
 
+- Permet blocar el tràfic entre 2 interfície
+- Paràmetre -Q indica que ha de funcionar inline
+
+### Modes de funcionament:
+- Alertes per consola
+- Enregistrar alertes
+
 ## Fitxers de configuració
+
+- L'arxiu de configuració es troba /etc/snort/snort.conf
 
 ## Regles a Snort
 
+- Les regles base es troben a /etc/snort/rules
+- Des de l'arxiu de configuració poden activar i desactivar regles.
+ACABAR DE MIRAR
+
 ## Variables SNORT
+
+- Snort diposa d’una sèrie de variables globals amb les que podem 
+configurar de forma senzilla l’estructura de la nostra xarxa
+    - **HOME_NET**
+    - **EXTERNAL_NET**
+    - **SERVERS**
+    - **PORTS**
+    - **Llista Blanca**
+    - **Llista negra**
 
 ## Regles SNORT
 
+- Les regles es divideixen en dues parts, La, capçalera i els camps espécifics
+- Parts de la capçalera:
+![Capçalera](/img/Capçalera.png)
+
+- Acció: Indica que succeix a la regla
+    - Alert
+    - Log
+    - Pass
+    - Drop
+    - Reject
+    - sdrop
+
+- Protocol
+- Origen i destí
+- Ports
+- Direcció
+
+- Camps específics: ns permeten ajustar més concretament que busquem, es troben entre parèntesi i separats per ‘’;’’
+    - msg:
+    - sid:
+    - rev:
+    - classtype:
+    - priority
+    - flow:
+
 ## Creant les nostres Regles SNORT
+
+- **Objectiu:** Es necessari saber quin es l’objectiu de la regla:
+    - Detectar un tipus de tràfic.
+    - Bloquejar tràfic a llocs no permesos.
+    - Crear perfiles de navegació
+    - Buscar connexions de noves amenaces.
+    - Detectar fugues d’informació.
+- **Acció:** que volem que passi.
+    - Informar al nostre SOC (Centre d’Operacions de Seguretat).
+    - Escriure en un log amb informació.
+    - Actuar sobre el Firewall.
+- **Abast:** Area d’actuaciñio de la regla.
+    - Interna.
+    - Externa.
+    - Comunicació de fora a dins.
+   -  En Ambdós sentits.
+Tota la xarxa o alguns equips.
+- **Optimització:** Quina es la millor forma de buscar.
+    - Valor Hexadecimals.
+    - Cadenes de text.
+    - Text en la URL.
 
 ## Revisió d’alertes
 
+- Els arxius de log de les alertes, així com la resta de logs generats per Snort, es troben per defecte a /var/log/snort
+
 ## Exemples regles SNORT
+
+- `alert tcp $HOME_NET 21 → any any (msg:"Error autenticació FTP"; content:"Login or password incorrect"; sid:1000003;  rev:1;)`
+- `Alert tcp $EXTERNAL_NET any → $HOME_NET 3306 (msg:"MYSQL  show  databases  attempt";  flow:  to_server,  established; content:"|0F 00 00 00 03 | show databases"; sid:1000004; rev:1;)`
 
 
 # Xarxes Privades Virtuals
