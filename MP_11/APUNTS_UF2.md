@@ -192,7 +192,7 @@ POSAR FOTO DE L'ESQUEMA
 
 - **Exemple:**
 
-![Interconnexió de xarxes](/img/Captura%20de%20pantalla%202023-12-14%20110020.png)
+![Interconnexió de xarxes](/MP_11/img/Captura%20de%20pantalla%202023-12-14%20110020.png)
 
 - S'establerix una VPN entre dos gateways, cadascun d'una xarxa privada
 - Les màquines de les xarxes utilitzen aquests gateways com routers
@@ -203,7 +203,7 @@ POSAR FOTO DE L'ESQUEMA
 
 - Exemple:
 
-![Treballadors remots](/img/Captura%20de%20pantalla%202023-12-14%20110710.png)
+![Treballadors remots](/MP_11/img/Captura%20de%20pantalla%202023-12-14%20110710.png)
 
 - Qualsevol persona amb permís pot connectar-s'hi des de qualsevol lloc.
 - L'ordinador ha de comptar amb un client VPN, que estableix una connexió al concentrador de VPNs de la xarxa corporativa
@@ -228,7 +228,7 @@ POSAR FOTO DE L'ESQUEMA
 - Les dades que han de ser transportades poden ser paquets de protocol diferent al que gestioni internet
 - Els paquets encapsulats són llavors encaminats sobre Internet entre els extrems del túnel. Aquesta ruta l'ogica se l'anomena 'túnel'.
 
-![Paquets tunneling](/img/Captura%20de%20pantalla%202023-12-14%20113345.png)
+![Paquets tunneling](/MP_11/img/Captura%20de%20pantalla%202023-12-14%20113345.png)
 
 ## Protocols de Tunneling
 
