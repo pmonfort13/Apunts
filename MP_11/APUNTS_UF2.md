@@ -9,7 +9,7 @@
     - Seguretat dissenyada com quelcom que és part de l'organització.
     - El marc legal --> considerat com una part més del disseny de les polítiques de seguretat
 
-- **Seguretat activa:** Aquells mecanismes, físics i lògics que pernmetens prevenir i detectar possibles intents de comprometre els components d'un sistema informàtic.
+- **Seguretat activa:** Aquells mecanismes, físics i lògics que permeten prevenir i detectar possibles intents de comprometre els components d'un sistema informàtic.
 
 ## Sistemes personals
 ### Atacs i contramesures
