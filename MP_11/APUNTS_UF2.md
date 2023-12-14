@@ -139,7 +139,7 @@
 
 ## Esquema de funcionament d'un escàner
 
-![Esquema_escaner](/img/prova.png)
+![Esquema_escaner](/MP_11/img/prova.png)
 
 ## Ordres del sistema
 
@@ -182,7 +182,7 @@
 
 - Objectiu --> Inutliitzar el maquinari o programa de manera que els recursos del sistema no siguin accesibles desde la xarxa.
 - Basat en el modus operandi del protocol d'establiment de sessió.
-![Esquema Atac DDoS](/img/ddos-attack-1-1024x694.png)
+![Esquema Atac DDoS](/MP_11/img/ddos-attack-1-1024x694.png)
 
 ## Atacs de falsejament d'identitat o spoofing
 
@@ -293,7 +293,7 @@ configurar de forma senzilla l’estructura de la nostra xarxa
 
 - Les regles es divideixen en dues parts, La, capçalera i els camps espécifics
 - Parts de la capçalera:
-![Capçalera](/img/Capçalera.png)
+![Capçalera](/MP_11/img/Capçalera.png)
 
 - Acció: Indica que succeix a la regla
     - Alert
