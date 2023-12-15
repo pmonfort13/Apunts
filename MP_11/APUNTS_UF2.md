@@ -152,8 +152,9 @@
 - **Comunicacions sense fil** --> basades en ones de ràdio o infroges, permeten connectar-se des de qualsevol lloc sense necessitat d'estendre cap cablejat.
 - **Wifi** --> wireless fidelity - Xarxes locals sense fils --> WLAN
 - Les  xarxes  locals  sense  fil  poden  operar  en  mode  ad  hoc  o  en  mode infraestructura:
-    - **Mode ad hoc**
-    - **Mode infraestructura**
+    - **Mode ad hoc**(Client a Client): Comunicació directa entre màquines sense necessitat de punt d'accés.
+    - **Mode infraestructura**(Client a Punt d'Accés): Comunicació a través de punts d'accés que actuen com a repetidors.
+
 
 ## Riscos potencials dels serveis de xarxa
 
